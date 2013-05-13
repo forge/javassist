@@ -4,6 +4,7 @@
 .DS_Store
 dependency-reduced-pom.xml
 eclipse-output/
+runtest/
 target/
 *.iml
 *.ipr
