@@ -700,10 +700,9 @@ public class ProxyFactory {
         setField(DEFAULT_INTERCEPTOR, handler);
     }
 
-    private static int counter = 0;
-
     private static synchronized String makeProxyName(String classname) {
-        return classname + "_$$_javassist_" + counter++;
+       // Slow unique proxy generation.
+        return classname + "_$$_javassist_" + UUID.randomUUID().toString();
     }
 
     private ClassFile make() throws CannotCompileException {
