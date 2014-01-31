@@ -21,9 +21,9 @@ import java.io.FileReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Vector;
-import javassist.CannotCompileException;
-import javassist.CtClass;
-import javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CannotCompileException;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
 
 /**
  * This is a preprocessor for Java source programs using annotated

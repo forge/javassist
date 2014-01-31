@@ -1,10 +1,11 @@
 package test.javassist.proxy;
 
-import javassist.*;
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyFactory;
-import javassist.util.proxy.ProxyObject;
+import org.jboss.forge.furnace.proxy.javassist.*;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyObject;
+
 import junit.framework.TestCase;
 
 /**
@@ -27,8 +28,8 @@ public class ProxyCacheGCTest extends TestCase
     {
         basePool = ClassPool.getDefault();
         try {
-            baseHandler = basePool.get("javassist.util.proxy.MethodHandler");
-            baseFilter = basePool.get("javassist.util.proxy.MethodFilter");
+            baseHandler = basePool.get("org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler");
+            baseFilter = basePool.get("org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter");
         } catch (NotFoundException e) {
             e.printStackTrace();
             fail("could not find class " + e);

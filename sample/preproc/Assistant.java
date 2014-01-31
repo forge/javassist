@@ -15,9 +15,9 @@
 
 package sample.preproc;
 
-import javassist.CtClass;
-import javassist.CannotCompileException;
-import javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.CannotCompileException;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
 
 /**
  * This is an interface for objects invoked by the

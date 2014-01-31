@@ -1,5 +1,5 @@
 import java.io.*;
-import javassist.util.HotSwapper;
+import org.jboss.forge.furnace.proxy.javassist.util.HotSwapper;
 
 public class Test {
     public static void main(String[] args) throws Exception {

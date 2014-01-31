@@ -1,6 +1,6 @@
 package sample.evolve;
 
-import javassist.tools.web.*;
+import org.jboss.forge.furnace.proxy.javassist.tools.web.*;
 import java.io.*;
 
 /**

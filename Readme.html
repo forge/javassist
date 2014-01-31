@@ -42,7 +42,7 @@ other editors.
 </tr>
 
 <tr>
-<td><li><tt>./javassist.jar</tt></td>
+<td><li><tt>./org.jboss.forge.furnace.proxy.javassist.jar</tt></td>
 <td>The Javassist jar file (class files)</td>
 </tr>
 
@@ -76,13 +76,13 @@ Otherwise, follow the instructions below.
 
 <h3>1. Move to the directory where this Readme.html file is located.</h3>
 
-<p>In the following instructions, we assume that the javassist.jar
+<p>In the following instructions, we assume that the org.jboss.forge.furnace.proxy.javassist.jar
 file is included in the class path.
 For example, the javac and java commands must receive
 the following <code>classpath</code> option:
 
 <ul><pre>
--classpath ".:javassist.jar"
+-classpath ".:org.jboss.forge.furnace.proxy.javassist.jar"
 </pre></ul>
 
 <p>If the operating system is Windows, the path
@@ -92,21 +92,21 @@ the <code>-cp</code> option
 as well as <code>-classpath</code>.
 
 <p>If you don't want to use the class-path option, you can make
-<code>javassist.jar</code> included in the <code>CLASSPATH</code>
+<code>org.jboss.forge.furnace.proxy.javassist.jar</code> included in the <code>CLASSPATH</code>
 environment:
 
 <ul><pre>
-export CLASSPATH=.:javassist.jar
+export CLASSPATH=.:org.jboss.forge.furnace.proxy.javassist.jar
 </pre></ul>
 
 <p>or if the operating system is Windows:
 
 <ul><pre>
-set CLASSPATH=.;javassist.jar
+set CLASSPATH=.;org.jboss.forge.furnace.proxy.javassist.jar
 </pre></ul>
 
 
-<p>Otherwise, you can copy <tt>javassist.jar</tt> to the directory
+<p>Otherwise, you can copy <tt>org.jboss.forge.furnace.proxy.javassist.jar</tt> to the directory
 
 <ul>&lt;<i>java-home</i>&gt;<tt>/jre/lib/ext</tt>.</ul>
 
@@ -137,7 +137,7 @@ set CLASSPATH=.;javassist.jar
 
 <ul><pre>
 % javac sample/reflect/*.java
-% java javassist.tools.reflect.Loader sample.reflect.Main Joe
+% java org.jboss.forge.furnace.proxy.javassist.tools.reflect.Loader sample.reflect.Main Joe
 </pre></ul>
 
 <p>Compare this result with that of the regular execution without reflection:
@@ -151,7 +151,7 @@ set CLASSPATH=.;javassist.jar
    To do this, type the commands:
 
 <ul><pre>
-% java javassist.tools.reflect.Compiler sample.reflect.Person -m sample.reflect.VerboseMetaobj
+% java org.jboss.forge.furnace.proxy.javassist.tools.reflect.Compiler sample.reflect.Person -m sample.reflect.VerboseMetaobj
 </pre></ul>
 
 <p>   Then,
@@ -190,7 +190,7 @@ a vector of a given type at compile time.
 % java sample.vector.Test
 </pre></ul>
 
-<p>Note: <code>javassist.jar</code> is unnecessary to compile and execute
+<p>Note: <code>org.jboss.forge.furnace.proxy.javassist.jar</code> is unnecessary to compile and execute
 <code>sample/vector/Test.java</code>.
 
 For more details, see
@@ -199,7 +199,7 @@ and <a type="text/plain" href="sample/vector/VectorAssistant.java">sample/vector
 
 <h3>6. sample/rmi/*.java</h3>
 
-<p>   This demonstrates the javassist.rmi package.
+<p>   This demonstrates the org.jboss.forge.furnace.proxy.javassist.rmi package.
 
 <p>   To run, type the commands:
 <ul><pre>
@@ -217,7 +217,7 @@ with a web browser running
 <p>   Otherwise, run sample.rmi.CountApplet as an application:
 
 <ul><pre>
-% java javassist.web.Viewer localhost 5001 sample.rmi.CountApplet
+% java org.jboss.forge.furnace.proxy.javassist.web.Viewer localhost 5001 sample.rmi.CountApplet
 </pre></ul>
 
 <h3>7. sample/evolve/*.java</h3>
@@ -271,11 +271,11 @@ To run, first type the following commands:
 <p>To know the version number, type this command:
 
 <ul><pre>
-% java -jar javassist.jar
+% java -jar org.jboss.forge.furnace.proxy.javassist.jar
 </pre></ul>
 
 <p>Javassist provides a class file viewer for debugging.  For more details,
-see javassist.Dump.
+see org.jboss.forge.furnace.proxy.javassist.Dump.
 
 <p><br>
 
@@ -307,7 +307,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <p>-version 3.16 on February 19, 2012
 <ul>
 	<li>JIRA JASSIST-126, 127, 144, 145, 146, 147, 149, 150, 151, 152, 153, 155.
-	<li><code>javassist.bytecode.analysis.ControlFlow</code> was added.
+	<li><code>org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.ControlFlow</code> was added.
 	<li>Java 7 compatibility.
 </ul>
 
@@ -336,7 +336,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <p>-version 3.11 on July 3, 2009
 <ul>
 	<li>JIRA JASSIST-67, 68, 74, 75, 76, 77, 81, 83, 84, 85, 86, 87 were fixed.
-	<li>Now javassist.bytecode.CodeIterator can insert a gap into
+	<li>Now org.jboss.forge.furnace.proxy.javassist.bytecode.CodeIterator can insert a gap into
 	a large method body more than 32KB.  (JIRA JASSIST-79, 80)
 </ul>
 
@@ -358,20 +358,20 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <p>-version 3.8.1 on July 17, 2008
 <ul>
 	<li>CtClass.rebuildClassFile() has been added.
-	<li>A few bugs of javassist.bytecode.analysis have been fixed.
+	<li>A few bugs of org.jboss.forge.furnace.proxy.javassist.bytecode.analysis have been fixed.
 	3.8.0 could not correctly deal with one letter class name
 	such as I and J.
 </ul>
 
 <p>-version 3.8.0 on June 13, 2008
 <ul>
-    <li>javassist.bytecode.analysis was implemented.
+    <li>org.jboss.forge.furnace.proxy.javassist.bytecode.analysis was implemented.
   	<li>JASSIST-45, 47, 51, 54-57, 60, 62 were fixed.
 </ul>
 
 <p>-version 3.7.1 on March 10, 2008
 <ul>
-    <li>a bug of javassist.util.proxy has been fixed.
+    <li>a bug of org.jboss.forge.furnace.proxy.javassist.util.proxy has been fixed.
 </ul>
 
 <p>-version 3.7 on January 20, 2008
@@ -405,7 +405,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 	<li>A bug in CodeConverter#replaceFieldRead() and CodeConverter#replaceFieldWrite()
 	was fixed. <a href="http://jira.jboss.com/jira/browse/JBAOP-284">JBAOP-284</a>.
 
-    <li>A synchronization bug and a performance bug in <code>javassist.util.proxy</code>
+    <li>A synchronization bug and a performance bug in <code>org.jboss.forge.furnace.proxy.javassist.util.proxy</code>
     have been fixed
     (<a href="http://jira.jboss.com/jira/browse/JASSIST-28">JASSIST-28</a>).
     Now generated proxy classes are cached.  To turn the caching off,
@@ -426,7 +426,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
     <li>A bug related to a way of dealing with a bridge method was fixed
     (<a href="http://jira.jboss.com/jira/browse/HIBERNATE-37">HIBERNATE-37</a>).
 
-    <li>javassist.scopedpool package was added.
+    <li>org.jboss.forge.furnace.proxy.javassist.scopedpool package was added.
 </ul>
 
 <p>-version 3.2 on June 21, 2006
@@ -439,18 +439,18 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 
 <p>- version 3.2.0.CR2 on May 9, 2006
 <ul>
-   <li>A bug of replace(String,ExprEditor) in javassist.expr.Expr has been fixed.
+   <li>A bug of replace(String,ExprEditor) in org.jboss.forge.furnace.proxy.javassist.expr.Expr has been fixed.
   <li>Updated ProxyFactory getClassLoader to choose the javassit class loader
    when the proxy superclass has a null class loader (a jdk/endorsed class)
    (<a href='http://jira.jboss.com/jira/browse/JASSIST-18'>JASSIST-18</a>).
-  <li>Updated the throws clause of the javassist.util.proxy.MethodHandler
+  <li>Updated the throws clause of the org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler
    to be Throwable rather than Exception
    (<a href='http://jira.jboss.com/jira/browse/JASSIST-16'>JASSIST-16</a>).
 </ul>
 
 <p>- version 3.2.0.CR1 on March 18, 2006
 <ul>
-  <li>Annotations enhancements to javassist.bytecode.MethodInfo.
+  <li>Annotations enhancements to org.jboss.forge.furnace.proxy.javassist.bytecode.MethodInfo.
   <li>Allow a ClassPool to override the "guess" at the classloader to use.
 </ul>
 
@@ -460,22 +460,22 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
   <li>getFields(), getMethods(), and getConstructors() in CtClass
     were changed to return non-private memebers instead of only
     public members.
-  <li>getEnclosingClass() in javassist.CtClass was renamed
+  <li>getEnclosingClass() in org.jboss.forge.furnace.proxy.javassist.CtClass was renamed
       to getEnclosingMethod().
   <li>getModifiers() was extended to return Modifier.STATIC if the class
       is a static inner class.
   <li>The return type of CtClass.stopPruning() was changed from void
     to boolean.
-  <li>toMethod() in javassist.CtConstructor has been implemented.
-  <li>It includes new javassist.util.proxy package
+  <li>toMethod() in org.jboss.forge.furnace.proxy.javassist.CtConstructor has been implemented.
+  <li>It includes new org.jboss.forge.furnace.proxy.javassist.util.proxy package
       similar to Enhancer of CGLIB.
   <p>
   <li>The subpackages of Javassist were restructured.
   <ul>
-    <li>javassist.tool package was renamed to javassist.tools.
-    <li>HotSwapper was moved to javassist.util.
-    <li>Several subpackages were moved to javassist.tools.
-    <li>javassist.preproc package was elminated and the source was
+    <li>org.jboss.forge.furnace.proxy.javassist.tool package was renamed to org.jboss.forge.furnace.proxy.javassist.tools.
+    <li>HotSwapper was moved to org.jboss.forge.furnace.proxy.javassist.util.
+    <li>Several subpackages were moved to org.jboss.forge.furnace.proxy.javassist.tools.
+    <li>org.jboss.forge.furnace.proxy.javassist.preproc package was elminated and the source was
         moved to the sample directory.
   </ul>
 </ul>
@@ -491,11 +491,11 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 
 <ul>
   <li>Better annotation supports.  See <code>CtClass.getAnnotations()</code>
-  <li>javassist.tool.HotSwapper was added.
-  <li>javassist.ClassPool.importPackage() was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.tool.HotSwapper was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.ClassPool.importPackage() was added.
   <li>The compiler now accepts array initializers
     (only one dimensional arrays).
-  <li>javassist.Dump was moved to javassist.tool.Dump.
+  <li>org.jboss.forge.furnace.proxy.javassist.Dump was moved to org.jboss.forge.furnace.proxy.javassist.tool.Dump.
   <li>Many bugs were fixed.
 </ul>
 
@@ -512,10 +512,10 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <ul>
   <li>CtClass.toClass() has been reimplemented.  The behavior has been
       changed.
-  <li>javassist.expr.NewArray has been implemented.  It enables modifying
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.NewArray has been implemented.  It enables modifying
       an expression for array creation.
   <li><code>.class</code> notation has been supported.  The modified class
-      file needs javassist.runtime.DotClass at runtime.
+      file needs org.jboss.forge.furnace.proxy.javassist.runtime.DotClass at runtime.
   <li>a bug in <code>CtClass.getMethods()</code> has been fixed.
   <li>The compiler supports a switch statement.
 </ul>
@@ -526,20 +526,20 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
   <li>The ClassPool framework has been redesigned.
      <ul>
      <li>writeFile(), write(), ... in ClassPool have been moved to CtClass.
-     <li>The design of javassist.Translator has been changed.
+     <li>The design of org.jboss.forge.furnace.proxy.javassist.Translator has been changed.
      </ul>
 
-  <li>javassist.bytecode.annotation has been added for meta tags.
+  <li>org.jboss.forge.furnace.proxy.javassist.bytecode.annotation has been added for meta tags.
   <li>CtClass.makeNestedClass() has been added.
-  <li>The methods declared in javassist.bytecode.InnerClassesAttribute
+  <li>The methods declared in org.jboss.forge.furnace.proxy.javassist.bytecode.InnerClassesAttribute
       have been renamed a bit.
   <li>Now local variables were made available in the source text passed to
   CtBehavior.insertBefore(), MethodCall.replace(), etc.
   <li>CtClass.main(), which prints the version number, has been added.
   <li>ClassPool.SimpleLoader has been public.
-  <li>javassist.bytecode.DeprecatedAttribute has been added.
-  <li>javassist.bytecode.LocalVariableAttribute has been added.
-  <li>CtClass.getURL() and javassist.ClassPath.find() has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.bytecode.DeprecatedAttribute has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.bytecode.LocalVariableAttribute has been added.
+  <li>CtClass.getURL() and org.jboss.forge.furnace.proxy.javassist.ClassPath.find() has been added.
   <li>CtBehavior.insertAt() has been added.
   <li>CtClass.detach() has been added.
   <li>CodeAttribute.computeMaxStack() has been added.
@@ -552,8 +552,8 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
       To obtain the previous behavior, call CtClass.replaceClassName().
   <li>CtConstructor.setBody() now works for class initializers.
   <li>CtNewMethod.delegator() now works for static methods.
-  <li>javassist.expr.Expr.indexOfBytecode() has been added.
-  <li>javassist.Loader has been modified so that getPackage() returns
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.Expr.indexOfBytecode() has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.Loader has been modified so that getPackage() returns
       a package object.
   <li>Now, the compiler can correctly compile a try statement and an
       infinite while-loop.
@@ -573,9 +573,9 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
   <li>ClassPool.removeClassPath() and ClassPath.close() have been added.
   <li>ClassPool.makeClass(InputStream) has been added.
   <li>CtClass.makeClassInitializer() has been added.
-  <li>javassist.expr.Expr has been changed to a public class.
-  <li>javassist.expr.Handler has been added.
-  <li>javassist.expr.MethodCall.isSuper() has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.Expr has been changed to a public class.
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.Handler has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.MethodCall.isSuper() has been added.
   <li>CtMethod.isEmpty() and CtConstructor.isEmpty() have been added.
   <li>LoaderClassPath has been implemented.
 </ul>
@@ -584,17 +584,17 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <ul>
   <li>The compiler included in Javassist did not correctly work with
 	interface methods.  This bug was fixed.
-  <li>Now javassist.bytecode.Bytecode allows more than 255 local
+  <li>Now org.jboss.forge.furnace.proxy.javassist.bytecode.Bytecode allows more than 255 local
 	variables in the same method.
-  <li>javassist.expr.Instanceof and Cast have been added.
-  <li>javassist.expr.{MethodCall,NewExpr,FieldAccess,Instanceof,Cast}.where()
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.Instanceof and Cast have been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.{MethodCall,NewExpr,FieldAccess,Instanceof,Cast}.where()
         have been added.  They return the caller-side method surrounding the
 	expression.
-  <li>javassist.expr.{MethodCall,NewExpr,FieldAccess,Instanceof,Cast}.mayThrow()
+  <li>org.jboss.forge.furnace.proxy.javassist.expr.{MethodCall,NewExpr,FieldAccess,Instanceof,Cast}.mayThrow()
         have been added.
   <li>$class has been introduced.
   <li>The parameters to replaceFieldRead(), replaceFieldWrite(),
-      and redirectFieldAccess() in javassist.CodeConverter are changed.
+      and redirectFieldAccess() in org.jboss.forge.furnace.proxy.javassist.CodeConverter are changed.
   <li>The compiler could not correctly handle a try-catch statement.
       This bug has been fixed.
 </ul>
@@ -604,7 +604,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
   <li>The tutorial has been revised a bit.
   <li>SerialVersionUID class was donated by Bob Lee.  Thanks.
   <li>CtMethod.setBody() and CtConstructor.setBody() have been added.
-  <li>javassist.reflect.ClassMetaobject.useContextClassLoader has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.reflect.ClassMetaobject.useContextClassLoader has been added.
   If true, the reflection package does not use Class.forName() but uses
   a context class loader specified by the user.
   <li>$sig and $type are now available.
@@ -614,15 +614,15 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <p>- version 2.2 in October, 2002.
 <ul>
   <li>The tutorial has been revised.
-  <li>A new package <code>javassist.expr</code> has been added.
+  <li>A new package <code>org.jboss.forge.furnace.proxy.javassist.expr</code> has been added.
         This is replacement of classic <code>CodeConverter</code>.
-  <li>javassist.ConstParameter was changed into
-	javassist.CtMethod.ConstParameter.
-  <li>javassist.FieldInitializer was renamed into
-	javassist.CtField.Initializer.
-  <li>A bug in javassist.bytecode.Bytecode.addInvokeinterface() has been
+  <li>org.jboss.forge.furnace.proxy.javassist.ConstParameter was changed into
+	org.jboss.forge.furnace.proxy.javassist.CtMethod.ConstParameter.
+  <li>org.jboss.forge.furnace.proxy.javassist.FieldInitializer was renamed into
+	org.jboss.forge.furnace.proxy.javassist.CtField.Initializer.
+  <li>A bug in org.jboss.forge.furnace.proxy.javassist.bytecode.Bytecode.addInvokeinterface() has been
 	fixed.
-  <li>In javassist.bytecode.Bytecode, addGetfield(), addGetstatic(),
+  <li>In org.jboss.forge.furnace.proxy.javassist.bytecode.Bytecode, addGetfield(), addGetstatic(),
 	addInvokespecial(), addInvokestatic(), addInvokevirtual(),
 	and addInvokeinterface()
 	have been modified to update the current statck depth.
@@ -630,48 +630,48 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 
 <p>- version 2.1 in July, 2002.
 <ul>
-  <li>javassist.CtMember and javassist.CtBehavior have been added.
-  <li>javassist.CtClass.toBytecode() has been added.
-  <li>javassist.CtClass.toClass() and javassist.ClassPool.writeAsClass()
+  <li>org.jboss.forge.furnace.proxy.javassist.CtMember and org.jboss.forge.furnace.proxy.javassist.CtBehavior have been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.CtClass.toBytecode() has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.CtClass.toClass() and org.jboss.forge.furnace.proxy.javassist.ClassPool.writeAsClass()
 	has been added.
-  <li>javassist.ByteArrayClassPath has been added.
-  <li>javassist.bytecode.Mnemonic has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.ByteArrayClassPath has been added.
+  <li>org.jboss.forge.furnace.proxy.javassist.bytecode.Mnemonic has been added.
   <li>Several bugs have been fixed.
 </ul>
 
 <p>- version 2.0 (major update) in November, 2001.
 <ul>
-  <li>The javassist.bytecode package has been provided.  It is a
+  <li>The org.jboss.forge.furnace.proxy.javassist.bytecode package has been provided.  It is a
     lower-level API for directly modifying a class file although
     the users must have detailed knowledge of the Java bytecode.
 
   <li>The mechanism for creating CtClass objects have been changed.
 
-  <li>javassist.tool.Dump moves to the javassist package.
+  <li>org.jboss.forge.furnace.proxy.javassist.tool.Dump moves to the org.jboss.forge.furnace.proxy.javassist package.
 </ul>
 
 <p>version 1.0 in July, 2001.
 <ul>
-  <li>javassist.reflect.Metaobject and ClassMetaobject was changed.
+  <li>org.jboss.forge.furnace.proxy.javassist.reflect.Metaobject and ClassMetaobject was changed.
     Now they throw the same exception that they receive from a
     base-level object.
 </ul>
 
 <p>- version 0.8
 <ul>
-  <li>javassist.tool.Dump was added.  It is a class file viewer.
+  <li>org.jboss.forge.furnace.proxy.javassist.tool.Dump was added.  It is a class file viewer.
 
-  <li>javassist.FiledInitializer.byNewArray() was added.  It is for
+  <li>org.jboss.forge.furnace.proxy.javassist.FiledInitializer.byNewArray() was added.  It is for
     initializing a field with an array object.
 
-  <li>javassist.CodeConverter.redirectMethodCall() was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.CodeConverter.redirectMethodCall() was added.
 
-  <li>javassist.Run was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.Run was added.
 </ul>
 
 <p>- version 0.7
 <ul>
-  <li>javassit.Loader was largely modified.  javassist.UserLoader was
+  <li>javassit.Loader was largely modified.  org.jboss.forge.furnace.proxy.javassist.UserLoader was
     deleted.  Instead, Codebase was renamed to ClassPath
     and UserClassPath was added.  Now programmers who want to
     customize Loader must write a class implementing UserClassPath
@@ -688,9 +688,9 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 
   <li>CtClass.getUserAttribute() was removed.  Use CtClass.getAttribute().
 
-  <li>javassist.rmi.RmiLoader was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.rmi.RmiLoader was added.
 
-  <li>javassist.reflect.Metalevel._setMetaobject() was added.  Now
+  <li>org.jboss.forge.furnace.proxy.javassist.reflect.Metalevel._setMetaobject() was added.  Now
     metaobjects can be replaced at runtime.
 </ul>
 
@@ -702,11 +702,11 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
   <li>A bug crashed resulting bytecode if a class includes a private static
     filed.  It has been fixed.
 
-  <li>javassist.CtNewInterface was added.
+  <li>org.jboss.forge.furnace.proxy.javassist.CtNewInterface was added.
 
-  <li>javassist.Loader.recordClass() was renamed into makeClass().
+  <li>org.jboss.forge.furnace.proxy.javassist.Loader.recordClass() was renamed into makeClass().
 
-  <li>javassist.UserLoader.loadClass() was changed to take the second
+  <li>org.jboss.forge.furnace.proxy.javassist.UserLoader.loadClass() was changed to take the second
     parameter.
 </ul>
 
@@ -719,7 +719,7 @@ JIRA JASSIST-181, 183, 184, 189, 162, 185, 186, 190.
 <ul>
   <li>Major update again.  Many classes and methods were changed.
     Most of methods taking java.lang.Class have been changed to
-    take javassist.CtClass.
+    take org.jboss.forge.furnace.proxy.javassist.CtClass.
 </ul>
 
 <p>- version 0.3
@@ -812,7 +812,7 @@ and all other contributors for their contributions.
 
 <hr>
 <a href="http://www.javassist.org">Shigeru Chiba</a>
-(Email: <tt>chiba@javassist.org</tt>)
+(Email: <tt>chiba@org.jboss.forge.furnace.proxy.javassist.org</tt>)
 
 </body>
 </html>

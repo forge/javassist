@@ -4,13 +4,16 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.InvocationTargetException;
-import javassist.util.proxy.ProxyFactory;
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyObject;
+
 import junit.framework.Assert;
 import junit.framework.TestCase;
+
 import java.io.*;
+
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyObject;
 
 public class ProxyTester extends TestCase {
     public ProxyTester(String s) {
@@ -351,7 +354,7 @@ public class ProxyTester extends TestCase {
         ProxyFactory.ClassLoaderProvider cp = ProxyFactory.classLoaderProvider;
         ProxyFactory.classLoaderProvider = new ProxyFactory.ClassLoaderProvider() {
             public ClassLoader get(ProxyFactory pf) {
-                return new javassist.Loader();
+                return new org.jboss.forge.furnace.proxy.javassist.Loader();
             }
         };
         ProxyFactory pf = new ProxyFactory();
@@ -384,7 +387,7 @@ public class ProxyTester extends TestCase {
         pf2.setSuperclass(WriteReplace2.class);
         Object data2 = pf2.createClass().newInstance();
         Method meth = data2.getClass().getDeclaredMethod("writeReplace", new Class[0]);
-        assertEquals("javassist.util.proxy.SerializedProxy",
+        assertEquals("org.jboss.forge.furnace.proxy.javassist.util.proxy.SerializedProxy",
                     meth.invoke(data2, new Object[0]).getClass().getName());
     }
 
@@ -429,7 +432,7 @@ public class ProxyTester extends TestCase {
     }
 
     public static void main(String[] args) {
-        // javassist.bytecode.ClassFile.MAJOR_VERSION = javassist.bytecode.ClassFile.JAVA_6;
+        // org.jboss.forge.furnace.proxy.javassist.bytecode.ClassFile.MAJOR_VERSION = org.jboss.forge.furnace.proxy.javassist.bytecode.ClassFile.JAVA_6;
         junit.textui.TestRunner.run(ProxyTester.class);
     }
 }

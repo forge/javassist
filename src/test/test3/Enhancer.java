@@ -1,8 +1,9 @@
 package test3;
 
-import javassist.*;
 import java.lang.reflect.Method;
 import java.lang.reflect.Field;
+
+import org.jboss.forge.furnace.proxy.javassist.*;
 
 /* Test code
  */

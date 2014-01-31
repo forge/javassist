@@ -1,14 +1,14 @@
-import javassist.CannotCompileException;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.NotFoundException;
-import javassist.expr.ExprEditor;
-import javassist.expr.MethodCall;
+import org.jboss.forge.furnace.proxy.javassist.CannotCompileException;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.CtMethod;
+import org.jboss.forge.furnace.proxy.javassist.NotFoundException;
+import org.jboss.forge.furnace.proxy.javassist.expr.ExprEditor;
+import org.jboss.forge.furnace.proxy.javassist.expr.MethodCall;
 
 public class Jassist150 {
     public static final String BASE_PATH = "./";
-    public static final String JAVASSIST_JAR = BASE_PATH + "javassist.jar";
+    public static final String JAVASSIST_JAR = BASE_PATH + "org.jboss.forge.furnace.proxy.javassist.jar";
     public static final String CLASSES_FOLDER = BASE_PATH + "build/classes";
     public static final String TEST_CLASSES_FOLDER = BASE_PATH
             + "build/test-classes";
@@ -105,6 +105,6 @@ public class Jassist150 {
                 e.printStackTrace();
             }
         }
-        System.out.println("size: " + javassist.compiler.MemberResolver.getInvalidMapSize());
+        System.out.println("size: " + org.jboss.forge.furnace.proxy.javassist.compiler.MemberResolver.getInvalidMapSize());
     }
 }

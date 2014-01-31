@@ -8,9 +8,10 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.InvocationHandler;
 import net.sf.cglib.proxy.NoOp;
 */
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyFactory;
+
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -32,7 +33,7 @@ public class ProxyFactoryPerformanceTest extends TestCase {
 	}
 	
 	public void testJavassist() throws Throwable {
-		callCreateClass("javassist", ProxyMaker.class);
+		callCreateClass("org.jboss.forge.furnace.proxy.javassist", ProxyMaker.class);
 	}
 	
 	/**

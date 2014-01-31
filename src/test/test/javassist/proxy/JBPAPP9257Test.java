@@ -1,11 +1,13 @@
 package test.javassist.proxy;
 
 import java.lang.reflect.Method;
-import javassist.util.proxy.ProxyFactory;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.ProxyObject;
-import javassist.util.proxy.Proxy;
+
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.Proxy;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyObject;
+
 import junit.framework.TestCase;
 
 public class JBPAPP9257Test extends TestCase {

@@ -9,10 +9,10 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.Proxy;
-import javassist.util.proxy.ProxyFactory;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.Proxy;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
 
 public class ProxySimpleTest extends TestCase {
 
@@ -55,7 +55,7 @@ public class ProxySimpleTest extends TestCase {
         ProxyFactory.ClassLoaderProvider cp = ProxyFactory.classLoaderProvider;
         ProxyFactory.classLoaderProvider = new ProxyFactory.ClassLoaderProvider() {
             public ClassLoader get(ProxyFactory pf) {
-                return new javassist.Loader();
+                return new org.jboss.forge.furnace.proxy.javassist.Loader();
             }
         };
         ProxyFactory pf = new ProxyFactory();
@@ -88,7 +88,7 @@ public class ProxySimpleTest extends TestCase {
         pf2.setSuperclass(WriteReplace2.class);
         Object data2 = pf2.createClass().newInstance();
         Method meth = data2.getClass().getDeclaredMethod("writeReplace", new Class[0]);
-        assertEquals("javassist.util.proxy.SerializedProxy",
+        assertEquals("org.jboss.forge.furnace.proxy.javassist.util.proxy.SerializedProxy",
                     meth.invoke(data2, new Object[0]).getClass().getName());
     }
 

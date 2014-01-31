@@ -1,6 +1,6 @@
 package sample.evolve;
 
-import javassist.*;
+import org.jboss.forge.furnace.proxy.javassist.*;
 
 /**
  * Evolution provides a set of methods for instrumenting bytecodes.

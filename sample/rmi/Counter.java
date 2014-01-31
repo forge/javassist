@@ -1,9 +1,9 @@
 package sample.rmi;
 
-import javassist.tools.rmi.AppletServer;
+import org.jboss.forge.furnace.proxy.javassist.tools.rmi.AppletServer;
 import java.io.IOException;
-import javassist.CannotCompileException;
-import javassist.NotFoundException;
+import org.jboss.forge.furnace.proxy.javassist.CannotCompileException;
+import org.jboss.forge.furnace.proxy.javassist.NotFoundException;
 
 public class Counter {
     private int count = 0;

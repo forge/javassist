@@ -4,18 +4,19 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.bytecode.AccessFlag;
-import javassist.bytecode.BadBytecode;
-import javassist.bytecode.Bytecode;
-import javassist.bytecode.CodeIterator;
-import javassist.bytecode.MethodInfo;
-import javassist.bytecode.Opcode;
-import javassist.bytecode.analysis.Analyzer;
-import javassist.bytecode.analysis.Frame;
-import javassist.bytecode.analysis.Type;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.CtMethod;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.AccessFlag;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.BadBytecode;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.Bytecode;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.CodeIterator;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.MethodInfo;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.Opcode;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.Analyzer;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.Frame;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.Type;
+
 import junit.framework.TestCase;
 
 /**

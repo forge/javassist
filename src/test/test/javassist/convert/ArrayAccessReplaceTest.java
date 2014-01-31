@@ -5,9 +5,10 @@ import java.net.URLClassLoader;
 import java.util.HashMap;
 import java.util.Map;
 
-import javassist.ClassPool;
-import javassist.CodeConverter;
-import javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CodeConverter;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+
 import junit.framework.TestCase;
 
 public class ArrayAccessReplaceTest extends TestCase {

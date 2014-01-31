@@ -1,6 +1,6 @@
 package sample.reflect;
 
-import javassist.tools.reflect.*;
+import org.jboss.forge.furnace.proxy.javassist.tools.reflect.*;
 
 public class VerboseMetaobj extends Metaobject {
     public VerboseMetaobj(Object self, Object[] args) {

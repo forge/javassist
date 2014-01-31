@@ -2,17 +2,18 @@ package test.javassist.bytecode.analysis;
 
 import java.io.IOException;
 
-import javassist.CannotCompileException;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.NotFoundException;
-import javassist.bytecode.AccessFlag;
-import javassist.bytecode.Bytecode;
-import javassist.bytecode.MethodInfo;
-import javassist.bytecode.Opcode;
-import javassist.bytecode.analysis.Subroutine;
-import javassist.bytecode.analysis.SubroutineScanner;
+import org.jboss.forge.furnace.proxy.javassist.CannotCompileException;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.CtMethod;
+import org.jboss.forge.furnace.proxy.javassist.NotFoundException;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.AccessFlag;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.Bytecode;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.MethodInfo;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.Opcode;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.Subroutine;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.SubroutineScanner;
+
 import junit.framework.TestCase;
 
 /**

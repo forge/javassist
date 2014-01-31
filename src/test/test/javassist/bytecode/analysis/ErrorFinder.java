@@ -3,10 +3,10 @@ package test.javassist.bytecode.analysis;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.bytecode.analysis.Analyzer;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.CtClass;
+import org.jboss.forge.furnace.proxy.javassist.CtMethod;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.Analyzer;
 
 /**
  * Simple testing tool that verifies class files can be analyzed.

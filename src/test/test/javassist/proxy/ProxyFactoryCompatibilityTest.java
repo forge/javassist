@@ -1,13 +1,14 @@
 package test.javassist.proxy;
 
-import javassist.*;
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyFactory;
-import javassist.util.proxy.ProxyObject;
 import junit.framework.TestCase;
 
 import java.lang.reflect.Method;
+
+import org.jboss.forge.furnace.proxy.javassist.*;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodFilter;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyFactory;
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.ProxyObject;
 
 /**
  * test which checks that it is still possible to use the old style proxy factory api

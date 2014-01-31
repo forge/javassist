@@ -1,9 +1,10 @@
 package test.javassist.bytecode.analysis;
 
-import javassist.ClassPool;
-import javassist.bytecode.analysis.ControlFlow;
-import javassist.bytecode.analysis.ControlFlow.Block;
-import javassist.bytecode.analysis.ControlFlow.Node;
+import org.jboss.forge.furnace.proxy.javassist.ClassPool;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.ControlFlow;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.ControlFlow.Block;
+import org.jboss.forge.furnace.proxy.javassist.bytecode.analysis.ControlFlow.Node;
+
 import junit.framework.TestCase;
 
 public class DomTreeTest extends TestCase {

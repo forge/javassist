@@ -1,7 +1,8 @@
 package testproxy;
 
-import javassist.util.proxy.MethodHandler;
 import java.lang.reflect.Method;
+
+import org.jboss.forge.furnace.proxy.javassist.util.proxy.MethodHandler;
 
 public class Target189 {
 	public interface TestProxy {

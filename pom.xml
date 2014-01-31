@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboss.forge</groupId>
-  <artifactId>forge-javassist</artifactId>
+  <artifactId>forge-org.jboss.forge.furnace.proxy.javassist</artifactId>
   <packaging>bundle</packaging>
   <description>
   	Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
@@ -16,20 +16,20 @@
     <url>https://jira.jboss.org/jira/browse/JASSIST/</url>
   </issueManagement>
   <licenses>
-    <!-- this is the license under which javassist is usually distributed
+    <!-- this is the license under which org.jboss.forge.furnace.proxy.javassist is usually distributed
       -->
     <license>
       <name>MPL 1.1</name>
       <url>http://www.mozilla.org/MPL/MPL-1.1.html</url>
     </license>
-    <!-- this is the license under which javassist is distributed when
+    <!-- this is the license under which org.jboss.forge.furnace.proxy.javassist is distributed when
 	 it is bundled with JBoss
       -->
     <license>
       <name>LGPL 2.1</name>
       <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
     </license>
-    <!-- this is the license under which javassist can be distributed.
+    <!-- this is the license under which org.jboss.forge.furnace.proxy.javassist can be distributed.
       -->
     <license>
       <name>Apache License 2.0</name>
@@ -38,16 +38,16 @@
   </licenses>
 
   <scm>
-    <connection>scm:svn:http://anonsvn.jboss.org/repos/javassist/</connection>
-    <developerConnection>scm:svn:https://svn.jboss.org/repos/javassist/</developerConnection>
-    <url>http://fisheye.jboss.org/browse/javassist/</url>
+    <connection>scm:svn:http://anonsvn.jboss.org/repos/org.jboss.forge.furnace.proxy.javassist/</connection>
+    <developerConnection>scm:svn:https://svn.jboss.org/repos/org.jboss.forge.furnace.proxy.javassist/</developerConnection>
+    <url>http://fisheye.jboss.org/browse/org.jboss.forge.furnace.proxy.javassist/</url>
   </scm>
 
   <developers>
     <developer>
       <id>chiba</id>
       <name>Shigeru Chiba</name>
-      <email>chiba@javassist.org</email>
+      <email>chiba@org.jboss.forge.furnace.proxy.javassist.org</email>
       <organization>The Javassist Project</organization>
       <organizationUrl>http://www.javassist.org/</organizationUrl>
       <roles>
@@ -136,7 +136,7 @@
         <version>2.12</version>
         <configuration>
           <includes>
-            <include>javassist/JvstTest.java</include>
+            <include>org.jboss.forge.furnace.proxy.javassist/JvstTest.java</include>
           </includes>
 	  <forkMode>once</forkMode>
           <workingDirectory>runtest</workingDirectory>
@@ -195,7 +195,7 @@
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
             <Import-Package>!com.sun.jdi.*</Import-Package>	
-            <Export-Package>!com.sun.jdi.*,javassist.*;version="${project.version}"</Export-Package>
+            <Export-Package>!com.sun.jdi.*,org.jboss.forge.furnace.proxy.javassist.*;version="${project.version}"</Export-Package>
           </instructions>
         </configuration>
         <extensions>true</extensions>

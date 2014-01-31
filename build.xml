@@ -4,13 +4,13 @@
 <!-- JBoss build file                                                    -->
 <!-- =================================================================== -->
 
-<project name="javassist" default="jar" basedir=".">
+<project name="org.jboss.forge.furnace.proxy.javassist" default="jar" basedir=".">
 
-  <property name="dist-version" value="javassist-3.17.1-GA"/>
+  <property name="dist-version" value="org.jboss.forge.furnace.proxy.javassist-3.17.1-GA"/>
 
   <property environment="env"/>
-  <property name="target.jar" value="javassist.jar"/>
-  <property name="target-src.jar" value="javassist-src.jar"/>
+  <property name="target.jar" value="org.jboss.forge.furnace.proxy.javassist.jar"/>
+  <property name="target-src.jar" value="org.jboss.forge.furnace.proxy.javassist-src.jar"/>
   <property name="lib.dir" value="${basedir}/lib"/>
   <property name="src.dir" value="${basedir}/src/main"/>
   <property name="build.dir" value="${basedir}/target"/>
@@ -98,7 +98,7 @@
       <jvmarg value="-XX:-FailOverToOldVerifier" />
       <classpath refid="test.classpath"/>
       <formatter type="xml" extension=".xml"/>
-      <test name="javassist.JvstTest" outfile="TestLog" />
+      <test name="org.jboss.forge.furnace.proxy.javassist.JvstTest" outfile="TestLog" />
     </junit>
   </target>
 
@@ -161,7 +161,7 @@ to ${build.classes.dir}.</echo>
      </jar>
     <jar jarfile="${target-src.jar}" manifest="${src.dir}/META-INF/MANIFEST.MF">
       <fileset dir="${src.dir}">
-        <include name="javassist/**"/>
+        <include name="org.jboss.forge.furnace.proxy.javassist/**"/>
       </fileset>
     </jar>
   </target>
@@ -170,8 +170,8 @@ to ${build.classes.dir}.</echo>
   	<mkdir dir="html"/>
     <javadoc
            Locale="en_US"
-           packagenames="javassist.*"
-           excludepackagenames="javassist.compiler.*,javassist.convert.*,javassist.scopedpool.*,javassist.bytecode.stackmap.*"
+           packagenames="org.jboss.forge.furnace.proxy.javassist.*"
+           excludepackagenames="org.jboss.forge.furnace.proxy.javassist.compiler.*,org.jboss.forge.furnace.proxy.javassist.convert.*,org.jboss.forge.furnace.proxy.javassist.scopedpool.*,org.jboss.forge.furnace.proxy.javassist.bytecode.stackmap.*"
            sourcepath="src/main"
            defaultexcludes="yes"
            destdir="html"
@@ -227,7 +227,7 @@ Copyright (C) 1999- Shigeru Chiba. All Rights Reserved.</i>]]></bottom>
   </target>
 
   <target name = "sample-reflect" depends="sample" >
-    <java fork="true" dir="${run.dir}" classname="javassist.tools.reflect.Loader">
+    <java fork="true" dir="${run.dir}" classname="org.jboss.forge.furnace.proxy.javassist.tools.reflect.Loader">
       <classpath refid="classpath"/>
       <arg line="sample.reflect.Main Joe" />
     </java>

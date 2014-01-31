@@ -4,8 +4,8 @@
 
 package sample.reflect;
 
-import javassist.tools.reflect.Metalevel;
-import javassist.tools.reflect.Metaobject;
+import org.jboss.forge.furnace.proxy.javassist.tools.reflect.Metalevel;
+import org.jboss.forge.furnace.proxy.javassist.tools.reflect.Metaobject;
 
 public class Person {
     public String name;

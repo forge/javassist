@@ -1,6 +1,6 @@
 package sample.reflect;
 
-import javassist.tools.reflect.Loader;
+import org.jboss.forge.furnace.proxy.javassist.tools.reflect.Loader;
 
 /*
   The "verbose metaobject" example (JDK 1.2 or later only).
@@ -14,7 +14,7 @@ import javassist.tools.reflect.Loader;
 
   To run,
 
-  % java javassist.tools.reflect.Loader sample.reflect.Main Joe
+  % java org.jboss.forge.furnace.proxy.javassist.tools.reflect.Loader sample.reflect.Main Joe
 
   Compare this result with that of the regular execution without reflection:
 
@@ -25,7 +25,7 @@ public class Main {
         Loader cl = (Loader)Main.class.getClassLoader();
         cl.makeReflective("sample.reflect.Person",
                           "sample.reflect.VerboseMetaobj",
-                          "javassist.tools.reflect.ClassMetaobject");
+                          "org.jboss.forge.furnace.proxy.javassist.tools.reflect.ClassMetaobject");
 
         cl.run("sample.reflect.Person", args);
     }

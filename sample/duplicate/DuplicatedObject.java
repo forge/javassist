@@ -1,6 +1,6 @@
 package sample.duplicate;
 
-import javassist.tools.reflect.*;
+import org.jboss.forge.furnace.proxy.javassist.tools.reflect.*;
 
 public class DuplicatedObject extends Metaobject {
     private DuplicatedObject backup;

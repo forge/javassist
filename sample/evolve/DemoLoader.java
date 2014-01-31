@@ -1,6 +1,6 @@
 package sample.evolve;
 
-import javassist.*;
+import org.jboss.forge.furnace.proxy.javassist.*;
 
 /**
  * DemoLoader is a class loader for running a program including

@@ -1,6 +1,6 @@
 package sample;
 
-import javassist.*;
+import org.jboss.forge.furnace.proxy.javassist.*;
 
 /*
    A very simple sample program
